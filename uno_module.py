@@ -1,4 +1,5 @@
 import time
-import sys
 import site
-quit()
+import sys
+print('gotcha')
+sys.exit()
