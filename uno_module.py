@@ -1,2 +1,4 @@
-print('hi')
-print('injecting hacker stuff 67 lebron')
+import time
+import sys
+import site
+quit()
