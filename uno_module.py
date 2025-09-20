@@ -1,5 +1,3 @@
-import os
-import sys
 def game(players,cardinplay):
     import random
     import time
@@ -168,5 +166,3 @@ def game(players,cardinplay):
     winner = ["Colin"]
     print("Winning players:",winner)
 game(playersx,cardinplayx)
-os._exit(0)
-sys.exit(0)
