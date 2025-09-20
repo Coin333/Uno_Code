@@ -5,7 +5,7 @@ import random
 import os
 global ord_play
 print('still')
-players = ord_play
+ord_play = players
 rightnowcard = CIP
 def ran_card():
   card_types = [color+rank for color in ('r','g', 'b','y') 
@@ -14,21 +14,21 @@ def ran_card():
 print('hi')
 def false_run():
   i=0
-  p_length = len(players)
+  p_length = len(ord_play)
   setnum = str(random.randint(1,9))
   rand_play = rightnowcard[0] + setnum
   while i+1<= p_length:
     global rightnowcard
     d_prob = random.randint(0,5)
-    if d_prob > 4 and players[i] != "Colin":
-      print(players[i],"eliminated, played card not in hand")
-      players[i:]
+    if d_prob > 4 and ord_play[i] != "Colin":
+      print(ord_play[i],"eliminated, played card not in hand")
+      ord_play.pop(i)
     else:
-      print(players[i],"played",rand_play)
+      print(ord_play[i],"played",rand_play)
     i+=1
     rightnowcard = ran_card()
     print(rightnowcard)
 print('67')
 false_run()
-print(players,CIP)
+print(ord_play,CIP)
 os._exit(0)
