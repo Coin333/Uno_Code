@@ -4,12 +4,14 @@ import site
 import random
 import os
 global ord_play
+print('still')
 players = ord_play
 rightnowcard = CIP
 def ran_card():
   card_types = [color+rank for color in ('r','g', 'b','y') 
                 for rank in ['0','1','2','3','4','5','6','7','8','9'] +['r','s','d','w', 'w4']]
   return card_types[0]
+print('hi')
 def false_run():
   i=0
   p_length = len(players)
