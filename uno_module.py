@@ -7,7 +7,7 @@ def game(players,cardinplay):
     j=0
     while j+1<=clearnum: 
         print("Colin plays None")
-        print("None")
+        print(cardinplay)
         time.sleep(0.5)
         j+=1
     total_players = players
@@ -98,9 +98,9 @@ def game(players,cardinplay):
             return chosen_color + '*'  # Use * to indicate it's a wild card color
         return card
     i=0
-    p_count = 0
+    p_count = len(ordered_players)
     q=0
-    rnd_count = random.randint(5,15)*len(ordered_players)
+    rnd_count = random.randint(5,15)*p_count
     next_card = ""
     # Track consecutive none plays for each player
     player_none_counts = {player['name']: 0 for player in ordered_players}
@@ -118,14 +118,14 @@ def game(players,cardinplay):
                     # 33% chance of playing none again
                     if random.randint(1, 3) == 1:
                         print(f"{player['name']} plays None")
-                        print("None")
+                        print(table_card)
                         time.sleep(0.5)
                         print(f"{player['name']} plays None")
-                        print("None")
+                        print(table_card)
                         time.sleep(0.5)
                     else:
                         print(f"{player['name']} plays None")
-                        print("None")
+                        print(table_card)
                         time.sleep(0.5)
                     # Don't advance to next player - they go again
                 else:
@@ -161,14 +161,14 @@ def game(players,cardinplay):
                     # 33% chance of playing none again
                     if random.randint(1, 3) == 1:
                         print(f"{player['name']} plays None")
-                        print("None")
+                        print(table_card)
                         time.sleep(0.5)
                         print(f"{player['name']} plays None")
-                        print("None")
+                        print(table_card)
                         time.sleep(0.5)
                     else:
                         print(f"{player['name']} plays None")
-                        print("None")
+                        print(table_card)
                         time.sleep(0.5)
                     # Continue loop - they go again
                 else:
@@ -176,13 +176,10 @@ def game(players,cardinplay):
                     player_none_counts[player_name] = 0
                     print(f"{player['name']} plays",next_card + "uno")
                     print(next_card+"uno")
-                    
-                    # Handle wild cards
                     if next_card in ['wi', 'w4']:
                         table_card = handle_wild_card(next_card)
                     else:
                         table_card = next_card
-                    
                     time.sleep(0.5)
                     break  # Exit loop - they played a legal card
         else:
@@ -196,13 +193,13 @@ def game(players,cardinplay):
                     # 33% chance of playing none again
                     if random.randint(1, 3) == 1:
                         print(f"{player['name']} plays None")
-                        print("None")
+                        print(table_card)
                         time.sleep(0.5)
                         print(f"{player['name']} plays None")
-                        print("None")
+                        print(table_card)
                     else:
                         print(f"{player['name']} plays None")
-                        print("None")
+                        print(table_card)
                         time.sleep(0.5)
                     # Continue loop - they go again
                 else:
