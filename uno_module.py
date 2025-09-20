@@ -82,13 +82,13 @@ def game(players,cardinplay):
             return random.choice(legal_cards)
         
         # Add a function to handle wild card color selection
-        def handle_wild_card(card):
-            if card in ['wi', 'w4']:
-                # Pick a random color for the wild card
-                colors = ['r', 'g', 'b', 'y']
-                chosen_color = random.choice(colors)
-                return chosen_color + '*'  # Use * to indicate it's a wild card color
-            return card
+    def handle_wild_card(card):
+        if card in ['wi', 'w4']:
+            # Pick a random color for the wild card
+            colors = ['r', 'g', 'b', 'y']
+            chosen_color = random.choice(colors)
+            return chosen_color + '*'  # Use * to indicate it's a wild card color
+        return card
     i=0
     p_count = 0
     q=0
