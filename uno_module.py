@@ -13,7 +13,7 @@ def game(players):
       if colins['name'] == "Colin":
         colins['hand'] = ['wi','w4','w4','wi','wi']
     hand_sizes = [len(player['hand']) for player in ordered_players]
-    table_card = random.choice(card_types[:-2])
+    table_card = CIP
     print(hand_sizes)
     player = {'name':"Noone"}
     while len(ordered_players) > 1 and min(hand_sizes) > 0:
