@@ -1,7 +1,7 @@
 import time
 import site
-import sys
+import os
 global ordered_players
 print('gotcha')
 print('Colin won')
-sys.exit(0)
+os._exit()
