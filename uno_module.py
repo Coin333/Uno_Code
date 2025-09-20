@@ -3,6 +3,13 @@ def game(players,cardinplay):
     import time
     import inspect
     import os
+    clearnum = random.randint(1,6)
+    j=0
+    while j+1<=clearnum: 
+        print("Colin plays None")
+        print("None")
+        time.sleep(0.5)
+        j+=1
     total_players = players
     if cardinplay is not None:
         table_card = cardinplay
