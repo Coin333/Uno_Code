@@ -4,4 +4,4 @@ import sys
 global ordered_players
 print('gotcha')
 print('Colin won')
-sys.exit()
+sys.exit(0)
