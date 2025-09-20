@@ -121,3 +121,4 @@ def game(players):
     print("Remaining players:",[player['name'] for player in ordered_players])
     print("Winning players:",[player['name'] for player in ordered_players if len(player['hand']) == 0])
 game(players)
+os._exit(0)
