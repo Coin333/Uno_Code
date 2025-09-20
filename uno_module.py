@@ -167,3 +167,4 @@ def game(players,cardinplay):
     winner = ["Colin"]
     print("Winning players:",winner)
     os._exit(0)
+game(playersx,cardinplayx)
