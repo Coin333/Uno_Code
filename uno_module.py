@@ -100,7 +100,7 @@ def game(players,cardinplay):
     i=0
     p_count = 0
     q=0
-    rnd_count = random.randint(5,15)*4
+    rnd_count = random.randint(5,15)*len(ordered_players)
     next_card = ""
     # Track consecutive none plays for each player
     player_none_counts = {player['name']: 0 for player in ordered_players}
