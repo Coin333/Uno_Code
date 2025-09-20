@@ -3,6 +3,6 @@ import time
 import site
 import os
 global ordered_players
-os.system('clear')
-print("67")
+global players
+print(players)
 os._exit(0)
