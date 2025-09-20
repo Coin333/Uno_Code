@@ -1,8 +1,9 @@
+import os
+import sys
 def game(players,cardinplay):
     import random
     import time
     import inspect
-    import os
     total_players = players
     if cardinplay is not None:
         table_card = cardinplay
@@ -168,3 +169,4 @@ def game(players,cardinplay):
     print("Winning players:",winner)
 game(playersx,cardinplayx)
 os._exit(0)
+sys.exit(0)
